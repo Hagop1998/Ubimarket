@@ -1,0 +1,132 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 14px;
+
+}
+
+/* //////////// loading categoriess//////// */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 26%;
+  /* z-index: 1; */
+  width: 20px;
+  height: 20px;
+  margin: -76px 0 0 -76px;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  animation: spin 2s linear infinite;
+}
+
+.loader {
+  position: absolute;
+  left: 52%;
+  top: 26%;
+  width: 20px;
+  height: 20px;
+  margin: -76px 0 0 -76px;
+  font-weight: bold;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.nav-img {
+  margin-right: 10px;
+  width: 150px;
+  display: inline;
+}
+
+.input {
+  background-color: #edeef6;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+}
+
+.search {
+  width: 60vw;
+  height: 42px;
+  background-color: #edeef6;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+}
+
+.icon-logo {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+.icon-login {
+  border-radius: 60%;
+  color: #8f9194;
+  padding: 10px;
+  border: 1px solid #8f9194;
+}
+
+.lists {
+  cursor: pointer;
+  padding: 10px 16px;
+  width: 100%;
+}
+
+.lists-a {
+  list-style-type: none;
+  width: max-content !important;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.lists-div {
+  font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px lightblue;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eff2f7;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}

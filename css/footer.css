@@ -1,0 +1,37 @@
+.footer-h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+.follow-us {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.footer {
+  margin-top: 50px;
+  font-size: 15px;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+.icon-footer {
+  font-size: 20px;
+}
+.categoris-footer {
+  text-decoration: none;
+  color: gray !important;
+  display: block;
+}
+.categoris-footer:hover{
+  color: rgb(0, 108, 250) !important;
+}
+.nav-img{
+  display: inline;
+}
+.selecttt{
+  background-color: white;
+  border: 0px;
+  outline: 0px;
+  appearance: none;
+}

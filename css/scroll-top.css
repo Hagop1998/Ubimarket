@@ -1,0 +1,67 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.42857143;
+}
+/* /////////////// scroll top ////////// */
+.to-top {
+  background: #00a4f5;
+  position: fixed;
+  bottom: 16px;
+  right: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  width: 42px;
+  height: 42px;
+  color: white !important;
+  pointer-events: auto;
+  opacity: 1;
+  
+}
+.icon-to-top {
+  color: white;
+  font-size: 25px;
+}
+
+.fillter-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  background: hsla(19, 97%, 51%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(19, 97%, 51%, 1) 0%,
+    hsla(44, 100%, 52%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(19, 97%, 51%, 1) 0%,
+    hsla(44, 100%, 52%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(19, 97%, 51%, 1) 0%,
+    hsla(44, 100%, 52%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FB5607", endColorstr="#FFBE0B", GradientType=1);
+}

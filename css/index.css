@@ -1,0 +1,52 @@
+html {
+  overflow-x: hidden;
+
+
+
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.card-img-top {
+  overflow: hidden;
+}
+
+/* //////////// navigation lists ///////////// */
+.found-product-number {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(128, 208, 235);
+  padding: 4px;
+  margin: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EFF2F7;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+
+
+
+
+

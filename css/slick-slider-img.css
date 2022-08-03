@@ -1,0 +1,62 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.42857143;
+}
+.container-3 {
+  background-color: #eff2f7;
+}
+
+.reviews {
+  color: lightgray;
+}
+
+.swiper {
+  width: 80%;
+  height: 80%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+
+  
+}
+
+.swiper-slide img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  height: 145px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px 0 rgb(100 106 108 / 20%);
+  border: none;
+
+ 
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+ 
+
+}
+
+/* .slick-prev::before {
+  content: "<";
+  color: red;
+  font-size: 300px;
+
+width: 100px;
+}
+
+.slick-next::before {
+  content: ">";
+  color: red;
+  font-size: 300px;
+  width: 100px;
+} */
