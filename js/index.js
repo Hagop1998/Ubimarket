@@ -11,6 +11,9 @@ function showPage() {
 }
 
 
+
+// import { productListArray } from "./script2.js";
+
 // /////////////////// categories///////////////////////////
 
 fetch("http://universities.hipolabs.com/search?country=United+States")
@@ -35,6 +38,8 @@ fetch("http://universities.hipolabs.com/search?country=United+States")
       widthVariable: true,
     });
   });
+
+
 
 // ////////////////sircle-image///////////////////////
 
@@ -172,13 +177,44 @@ $(".sliderr").slick({
   ],
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////cards////////////////////////////
+const queryString = window.location.search;
+// console.log("uurl", queryString);
+
 const cards = [
   {
     images: "./cards/1588002143014.jpg",
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 1,
     rating: 4,
     reviews: "(0 reviews)",
   },
@@ -187,6 +223,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 2,
     rating: 5,
     reviews: "(0 reviews)",
   },
@@ -195,6 +232,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 3,
     rating: 2,
     reviews: "(0 reviews)",
   },
@@ -203,6 +241,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 4,
     rating: 4,
     reviews: "(0 reviews)",
   },
@@ -211,6 +250,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 5,
     rating: 1,
     reviews: "(0 reviews)",
   },
@@ -219,6 +259,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 6,
     rating: 5,
     reviews: "(0 reviews)",
   },
@@ -227,6 +268,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 7,
     rating: 3,
     reviews: "(0 reviews)",
   },
@@ -235,6 +277,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 8,
     rating: 2,
     reviews: "(0 reviews)",
   },
@@ -243,6 +286,7 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 9,
     rating: 4,
     reviews: "(0 reviews)",
   },
@@ -251,10 +295,13 @@ const cards = [
     paragraph: "Lorem, ipsum dolor",
     price: "$ 28.80",
     link: "index5.html",
+    id: 10,
     rating: 5,
     reviews: "(0 reviews)",
   },
 ];
+
+
 
 const createProductDivv = (card) => {
   const productA = document.createElement("a");
@@ -313,6 +360,24 @@ const createProductDivv = (card) => {
   return productA;
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const productCard = document.getElementById("productCards");
 if (productCard) {
   for (const card of cards) {
@@ -323,38 +388,92 @@ if (productCard) {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const productCardsim = document.getElementById("productCardss");
 if (productCardsim) {
+function getMultipleRandom(cards, num) {
+  const shuffled = [...cards].sort(() => 0.5 - Math.random());
 
-  function getMultipleRandom(arr, num) {
-    const shuffled = [...arr].sort(() => 0.5 - Math.random());
-
-    return shuffled.slice(0, num);
-  }
-
-  let shuffleCards = getMultipleRandom(cards, 4);
-
-  console.log("shuffled card is :", shuffleCards);
-
-
-  // for (let i = 0; i < 4; i++) {
-  //   const card = cards[i];
-
-  //   // }
-  //   // for (const card of cards) {
-  //   let car = createProductDivv(card);
-  //   car.className = "gridd";
-  //     car.className = "grid-containerr";
-  //     //  car.className = "img-productt";
-  //   // car.className = "grid-containerr";
-    
-  //   productCardsim.appendChild(car);
-  // }
+  return shuffled.slice(0, num);
 }
 
+let randomList = getMultipleRandom(cards, 5);
+
+console.log("shuffled card is :", randomList);
+
+const createsimilarproductdiv = (spl) => {
+  const SimilarA = document.createElement("a");
+  const bottomDiv = document.createElement("div");
+  const productImage = document.createElement("img");
+  const productParagraph = document.createElement("p");
+  const productPrice = document.createElement("span");
+
+  
+  const productRating = document.createElement("div");
+  for (let i = 0; i < spl.rating; i++) {
+    const productRatingImg = document.createElement("i");
+    productRatingImg.className = "fa fa-star";
+    // productRating.className = "productRating";
+    productRating.appendChild(productRatingImg);
+  }
+
+  const productReviews = document.createElement("span");
+  productReviews.innerHTML = spl.reviews;
+  productReviews.className = "reviews";
+  productRating.appendChild(productReviews);
 
 
+  productImage.src = spl.images;
+  productImage.className = "img-product2";
+  productParagraph.innerHTML = spl.paragraph;
+  SimilarA.href = spl.link + "?id=" + spl.id;
+  // bottomDiv.className = "grid-containerr";
+  productPrice.innerHTML = spl.price;
+  productPrice.className = "price";
 
+  SimilarA.appendChild(bottomDiv);
+  bottomDiv.appendChild(productImage);
+  bottomDiv.appendChild(productParagraph);
+  bottomDiv.appendChild(productPrice);
+  bottomDiv.appendChild(productRating);
+
+  return SimilarA;
+};
+
+// const similarProductCard = document.getElementById("productCards");
+for (const spl of randomList) {
+  let car2 = createsimilarproductdiv(spl);
+// car2.className = "grid-containerr";
+// car2.className = "gridd";
+car2.classList.add("grid-containerr", "gridd");
+  productCardsim.appendChild(car2);
+}
+
+}
 
 // ///////////////// scroll to top////////////////////
 
